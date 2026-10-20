@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="description" content="GVJ - High-performance vault and media manager" />
+    <meta property="og:title" content="GVJ" />
+    <meta property="og:description" content="GVJ - High-performance vault and media manager" />
+    <meta property="og:image" content="/icon.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="/icon.jpg" />
+    <link rel="icon" type="image/jpeg" href="/icon.jpg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/icon.jpg" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icon.jpg" />
+    <link rel="manifest" href="/manifest.json" />
+    <title>GVJ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=Poppins:wght@300;400;500;600;700;800&family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --accent: #3b82f6;
+        --bg: #0f172a;
+        --surface: #1e293b;
+        --card-bg: #1e293b;
+        --text: #ffffff;
+        --text-primary: #ffffff;
+        --text-secondary: #cbd5e1;
+        --text-muted: #64748b;
+        --border: rgba(255, 255, 255, 0.12);
+        --skeleton-bg: #273549;
+        --toggle-off-bg: rgba(255, 255, 255, 0.15);
+        --system-font: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", sans-serif;
+        --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+        --ease-spring: cubic-bezier(0.3, 1.4, 0.6, 1);
+      }
+
+      html, body {
+        font-family: var(--system-font);
+        background-color: var(--bg);
+        color: var(--text);
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        overscroll-behavior: none;
+      }
+
+      #root {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+      }
+
+      ::-webkit-scrollbar {
+        display: none;
+      }
+
+      * {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        box-sizing: border-box;
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      @keyframes slideForward {
+        0% {
+          opacity: 0;
+          transform: translateX(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes slideBackward {
+        0% {
+          opacity: 0;
+          transform: translateX(-20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      .animate-slide-forward {
+        animation: slideForward 0.4s var(--ease-out-expo) forwards;
+      }
+
+      .animate-slide-backward {
+        animation: slideBackward 0.4s var(--ease-out-expo) forwards;
+      }
+
+      .gpu-accelerated {
+        will-change: transform;
+        transform: translateZ(0);
+      }
+
+      .glass-header {
+        backdrop-filter: blur(30px) saturate(180%);
+        -webkit-backdrop-filter: blur(30px) saturate(180%);
+      }
+
+      .contain-layout {
+        contain: layout;
+      }
+      
+      .tap-highlight-none {
+        -webkit-tap-highlight-color: transparent;
+      }
+    </style>
+  <link rel="stylesheet" href="/src/index.css">
+  <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

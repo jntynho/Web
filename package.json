@@ -1,0 +1,45 @@
+{
+  "name": "project",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx server.ts",
+    "build": "vite build && esbuild server.ts --bundle --platform=node --format=cjs --packages=external --sourcemap --outfile=dist/server.cjs",
+    "start": "node dist/server.cjs",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@google/genai": "^2.6.0",
+    "@supabase/supabase-js": "^2.108.2",
+    "@tailwindcss/vite": "^4.2.1",
+    "@types/hls.js": "^1.0.0",
+    "artplayer": "^5.4.0",
+    "axios": "^1.16.1",
+    "cheerio": "^1.2.0",
+    "cloudscraper": "^4.6.0",
+    "cors": "^2.8.6",
+    "dashjs": "^5.2.1",
+    "express": "^5.0.1",
+    "hls.js": "^1.7.3",
+    "http-proxy-middleware": "^4.0.0",
+    "lucide-react": "^1.43.0",
+    "motion": "^12.34.3",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-router-dom": "^7.12.0",
+    "react-zoom-pan-pinch": "^4.0.3",
+    "tailwindcss": "^4.2.1",
+    "tslib": "^2.6.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "esbuild": "^0.28.0",
+    "tsx": "^4.22.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0"
+  }
+}
